@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'editorconfig/editorconfig-vim'
+"Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
@@ -44,7 +44,10 @@ set autoread
 
 set ruler
 set wildmenu
-set hlsearch
+set hlsearch!
+
+nnoremap <F10> :set hlsearch!<CR>
+
 set list
 set listchars=trail:·
 
@@ -59,10 +62,10 @@ set noswapfile
 set expandtab
 
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
-set shell=bash
+set shell=zsh
 
 " set mouse=a
 
@@ -98,10 +101,10 @@ nmap <CR> o<Esc>
 set laststatus=2
 set timeoutlen=50
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+map <Up> :echo "PRESS K damnit"<cr>
+map <Down> :echo "You meant J for moving down right?"<cr>
+map <Left> :echo "PRESS H for moving left..."<cr>
+map <Right> :echo "PRESS L instead of right"<cr> 
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
