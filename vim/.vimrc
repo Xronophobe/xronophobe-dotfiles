@@ -12,9 +12,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'vim-scripts/loremipsum'
-
+"Plugin 'digitaltoad/vim-pug'
+"Plugin 'vim-scripts/loremipsum'
 Plugin 'fidian/hexmode'
 Plugin 'tpope/vim-abolish'
 
@@ -35,6 +34,8 @@ let mapleader=' '
 noremap <leader>w  :w!<cr>
 noremap <leader>q  :q!<cr>
 noremap <leader>wq  :wq<cr>
+nmap <F1> :echo expand('%:p')<cr>
+imap <F1> <nop>
 nnoremap <F2> :NERDTreeToggle<cr>
 map <leader>s :source ~/.vimrc<CR>
 
@@ -83,6 +84,13 @@ set title
 set showcmd
 
 set cursorline
+set cursorcolumn
+
+set incsearch
+set smartcase
+
+set lazyredraw
+
 
 let g:PreserveNoEOL_Function = function('PreserveNoEOL#Python#Preserve')
 
@@ -126,9 +134,11 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
+"function rmWindowsLineStart()
+"    %s/ //g
+
 map <BS> gT
 map <Tab> gt
 
 noremap % v%
 
-autocmd VimEnter * echo @%"betoltott"
