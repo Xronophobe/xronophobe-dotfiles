@@ -1,3 +1,17 @@
+# load all files from rc.d
+if [ -d $HOME/dotfiles/rc.d ]; then
+  for file in $HOME/dotfiles/rc.d/*.sh; do
+    source $file
+  done
+fi
+
+# load all files from zshrc.d
+if [ -d $HOME/dotfiles/zsh.d ]; then
+  for file in $HOME/dotfiles/zsh.d/*.zsh; do
+    source $file
+  done
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/xphe/.oh-my-zsh
 
@@ -13,7 +27,6 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -36,26 +49,6 @@ zstyle ':completion:*' special-dirs true
 
 # source $HOME/.npm-completion
 
-alias cddev="cd $HOME/dev"
-alias gitsetup="vim $HOME/.gitconfig"
-alias tmuxsetup="vim $HOME/.tmux.conf"
-alias vim="/usr/local/Cellar/vim/8.0.0005/bin/vim"
-alias vimsetup="vim $HOME/.vimrc"
-
 get_current_git_branch() {
     git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
-
-# load all files from zshrc.d
-if [ -d $HOME/dotfiles/zsh.d ]; then
-  for file in $HOME/dotfiles/zsh.d/*.zsh; do
-    echo $file
-  done
-fi
-
-# load all files from rc.d
-if [ -d $HOME/dotfiles/rc.d ]; then
-  for file in $HOME/dotfiles/rc.d/*.sh; do
-    source $file
-  done
-fi
