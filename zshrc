@@ -91,7 +91,7 @@ zstyle ':completion:*' special-dirs true
 alias cddev="cd $HOME/dev"
 alias gitsetup="vim $HOME/.gitconfig"
 alias tmuxsetup="vim $HOME/.tmux.conf"
-alias vim="/usr/local/Cellar/vim/7.4.1830/bin/vim"
+alias vim="/usr/local/Cellar/vim/8.0.0005/bin/vim"
 alias vimsetup="vim $HOME/.vimrc"
 alias zshsetup="vim $HOME/.zshrc"
 alias zshreload="source $HOME/.zshrc && echo '%: source $HOME/.zshrc\nReloading zshrc' "
