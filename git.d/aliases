@@ -1,0 +1,11 @@
+[alias]
+# Get the current branch name (not so useful in itself, but used in
+# other aliases)
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+  co = checkout
+  unstage = reset HEAD
+  diffst = diff --staged
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  spop = "!f() { git stash drop stash^{/$*}; }; f"
