@@ -43,6 +43,7 @@ set history=700
 
 set autoread
 
+set autochdir
 set ruler
 set wildmenu
 set hlsearch!
