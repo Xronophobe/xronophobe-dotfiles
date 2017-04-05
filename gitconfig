@@ -1,8 +1,0 @@
-[user]
-  name = Csanad Beres
-  email = qed.csberes@gmail.com
-[core]
-  excludesfile = /Users/xphe/.gitignore
-  editor = vim
-[include]
-  path = dotfiles/git.d/aliases
