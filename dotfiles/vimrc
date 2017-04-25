@@ -7,13 +7,12 @@ call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'digitaltoad/vim-pug'
-"Plugin 'vim-scripts/loremipsum'
 Plugin 'fidian/hexmode'
 Plugin 'tpope/vim-abolish'
 
