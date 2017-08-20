@@ -13,7 +13,7 @@ if [ -d $HOME/dotfiles/zsh.d ]; then
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/xphe/.oh-my-zsh
+export ZSH=/home/xphe/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
